@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Details</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f2f2f2;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+      font-size: 16px;
+    }
+    th {
+      background-color: gray;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .back-button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      background-color: gray;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .back-button i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Teacher Details - Class 8A</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Teacher Name</th>
+        <th>Subject</th>
+        <th>Teacher ID</th>
+        <th>Class</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mrs. Kavita Sharma</td>
+        <td>Social Science</td>
+        <td>TCH8059</td>
+        <td>8A</td>
+        <td>Class Teacher</td>
+      </tr>
+      <tr>
+        <td>Mr. Rakesh Verma</td>
+        <td>Mathematics</td>
+        <td>TCH8011</td>
+        <td>8A</td>
+        <td>Subject Teacher</td>
+      </tr>
+      <tr>
+        <td>Dr. Nidhi Gupta</td>
+        <td>Science</td>
+        <td>TCH8022</td>
+        <td>8A</td>
+        <td>Subject Teacher</td>
+      </tr>
+      <tr>
+        <td>Ms. Sneha Desai</td>
+        <td>English</td>
+        <td>TCH8033</td>
+        <td>8A</td>
+        <td>Subject Teacher</td>
+      </tr>
+      <tr>
+        <td>Mr. Rajeev Tiwari</td>
+        <td>Hindi</td>
+        <td>TCH8044</td>
+        <td>8A</td>
+        <td>Subject Teacher</td>
+      </tr>
+      <tr>
+        <td>Ms. Priya Mehta</td>
+        <td>Computer Science</td>
+        <td>TCH8066</td>
+        <td>8A</td>
+        <td>Subject Teacher</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="back-button" onclick="window.location.href='parent-dashboard.html'">
+    <i class="fas fa-arrow-left"></i> Back to Dashboard
+  </button>
+
+</body>
+</html>

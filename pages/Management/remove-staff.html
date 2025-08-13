@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Staff</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <h1>Select Department to Remove Staff</h1>
+  <select id="departmentSelect">
+    <option value="Admin">Admin</option>
+    <option value="Teaching">Teaching</option>
+    <option value="Support">Support</option>
+  </select>
+
+  <div id="staffList">
+    <table>
+      <thead>
+        <tr><th>Name</th><th>ID</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ravi Kumar</td><td>EMP101</td><td><button>Delete</button></td></tr>
+        <tr><td>Geetha Devi</td><td>EMP102</td><td><button>Delete</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="back-btn" onclick="window.history.back()">Back</button>
+</body>
+</html>

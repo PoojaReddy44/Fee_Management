@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Remove Student</title>
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+
+  <h1>Remove Student</h1>
+
+  <div class="form-group">
+    <label for="classSelect">Select Class:</label>
+    <select id="classSelect">
+      <option value="">-- Select Class --</option>
+      <option value="3rd">3rd</option>
+    </select>
+  </div>
+
+  <div id="studentListContainer" style="display: none;">
+    <h2 class="center-heading">Students in Class 3</h2>
+    <table id="removeTable">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <button onclick="window.history.back()" class="back-button">Back</button>
+
+  <script src="../../js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Fee Management System</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Optional: Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Home icon instead of hamburger -->
+  <button class="hamburger" onclick="toggleSidebar()">
+    <i class="fas fa-home"></i>
+  </button>
+
+  <!-- Sidebar menu -->
+  <div id="mySidebar" class="sidebar">
+    <h2>Fee Management</h2>
+    <a href="./pages/teacher/teacher-login.html"><i class="fas fa-chalkboard-teacher"></i> Teacher</a>
+    <a href="./pages/parent/parent-login.html"><i class="fas fa-user"></i> Parent</a>
+    <a href="./pages/management/management-login.html"><i class="fas fa-user-tie"></i> Management</a>
+  </div>
+
+  <div id="main-screen">
+    <img src="./images/logo.jpg" alt="Logo" />
+    <h1>SAIL KANYA SHIKSHA NIKETAN</h1>
+    <div class="button-container">
+      <button onclick="window.location.href='./pages/teacher/teacher-login.html'">
+        <i class="fas fa-chalkboard-teacher"></i> Teacher
+      </button>
+      <button onclick="window.location.href='./pages/parent/parent-login.html'">
+        <i class="fas fa-user"></i> Parent
+      </button>
+      <button onclick="window.location.href='./pages/management/management-login.html'">
+        <i class="fas fa-user-tie"></i> Management
+      </button>
+    </div>
+  </div>
+
+  <!-- Right-side Notification Panel -->
+  <div class="notification-panel">
+    <h3>Notifications</h3>
+    <div class="notification-scroll">
+      <p>📢 Regular Examination Fee Payment</p>
+      <p>📝 New Students List Updated</p>
+      <p>📊 Annual Exam Results Announced</p>
+      <p>📅 Parent-Teacher Meeting on 25th May</p>
+      <p>🎓 Admission Open for 2025 Batch</p>
+      <p>📁 Upload Documents by 30th May</p>
+      <p>📌 Staff Meeting Scheduled Tomorrow</p>
+    </div>
+  </div>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

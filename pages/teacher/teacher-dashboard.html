@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="teacher-dashboard">
+    <img src="../../images/logo.jpg" alt="Logo" />
+    <h1>Teacher Dashboard</h1>
+    <div class="button-container">
+      <button onclick="showAttendanceMenu()">
+        <i class="fas fa-user-check"></i> Attendance
+      </button>
+
+      <button onclick="showStudentRecords()">
+        <i class="fas fa-user-graduate"></i> Student Records
+      </button>
+
+      <button onclick="showPaySlips()">
+        <i class="fas fa-money-check-alt"></i> Pay Slips
+      </button>
+
+      <!-- New: View Report Card -->
+      <button onclick="viewReportCard()">
+        <i class="fas fa-file-alt"></i> View Report Card
+      </button>
+
+      <!-- New: Yearly Benefits Request -->
+      <button onclick="requestYearlyBenefits()">
+        <i class="fas fa-hand-holding-usd"></i> Yearly Benefits Request
+      </button>
+
+      <!-- New: Notice Generation -->
+      <button onclick="generateNotice()">
+        <i class="fas fa-bullhorn"></i> Notice Generation
+      </button>
+
+      <button onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Load home icon HTML
+    fetch("../../components/home-icon.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("home-icon-container").innerHTML = html;
+      });
+
+    // Navigation functions
+    function showAttendanceMenu() {
+      window.location.href = "./class-attendance.html";
+    }
+
+    function showStudentRecords() {
+      window.location.href = "./student-records.html";
+    }
+
+    function showPaySlips() {
+      window.location.href = "./pay-slips.html";
+    }
+
+    function viewReportCard() {
+      window.location.href = "./report-card.html";
+    }
+
+    function requestYearlyBenefits() {
+      window.location.href = "./yearly-benefits.html";
+    }
+
+    function generateNotice() {
+      window.location.href = "./notice-generation.html";
+    }
+
+   
+    
+    function logout() {
+        window.location.href = "/index.html"; // Absolute path from root
+    }
+
+
+</script>
+
+  </script>
+  
+  <script src="../../js/script.js" defer></script>
+</body>
+</html>

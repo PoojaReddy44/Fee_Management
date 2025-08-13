@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Login</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <!-- Font Awesome for Home icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Home Icon Container -->
+  <div id="home-icon-container"></div>
+
+  <div id="teacher-login">
+    <img src="../../images/logo.jpg" alt="Logo" />
+    <h1>Teacher Login</h1>
+    <form onsubmit="event.preventDefault(); loginTeacher();">
+      <input id="teacherId" type="text" placeholder="Teacher ID" required />
+      <input id="teacherPassword" type="password" placeholder="Password" required />
+      
+      <!-- Updated checkbox + label -->
+      <div class="remember-me-container">
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember Me</label>
+        </div>
+      </div>
+      <a href="../forgot-password.html" class="forgot-password">Forgot Password?</a>
+      <button type="submit">Login</button>
+      <button type="button" onclick="window.location.href='../../index.html'">Back</button>
+    </form>
+  </div>
+
+  <!-- Home Icon Loader Script -->
+  <script>
+    fetch("../../components/home-icon.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("home-icon-container").innerHTML = html;
+      });
+  </script>
+
+  <!-- Main JS -->
+  <script src="../../js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class Attendance</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="class-attendance">
+    <h1>Class Attendance</h1>
+    <label for="classSelect">Select Class:</label>
+    <select id="classSelect" onchange="generateClassAttendance()">
+      <option value="">Select Class</option>
+      <option value="12-A">12-A</option>
+      <option value="12-B">12-B</option>
+    </select>
+    <input type="date" id="classDate" onchange="generateClassAttendance()" />
+    <table id="classTable" class="hidden">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Present/Absent</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="showAttendanceMenu()" class="back-btn">Back</button>
+  </div>
+   <script>
+  fetch("../../components/home-icon.html")  // adjust path if needed
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("home-icon-container").innerHTML = html;
+    });
+</script>
+<script src="../../js/script.js" defer></script>
+</body>
+</html>

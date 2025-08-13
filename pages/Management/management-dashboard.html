@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Management Dashboard</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="management-dashboard">
+    <img src="../../images/logo.jpg" alt="Logo" />
+    <h1>Management Dashboard</h1>
+    <div class="button-container">
+      <button onclick="showManagementStudentRecords()">
+        <i class="fas fa-user-graduate"></i> Student Records
+      </button>
+      <button onclick="showFinances()">
+        <i class="fas fa-coins"></i> Finances
+      </button>
+      <button onclick="window.location.href='staff-records.html'">
+        <i class="fas fa-users-cog"></i> Staff Records
+      </button>
+      <button onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </div>
+  <script>
+    fetch("../../components/home-icon.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("home-icon-container").innerHTML = html;
+      });
+  </script>
+  <script src="../../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Info</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="parent-student-info" class="student-info">
+    <h1>Student Info</h1>
+    <p><strong>Student Name:</strong> Sample Student</p>
+    <p><strong>Student Roll No.:</strong> 123456789</p>
+    <p><strong>Date of Birth:</strong> 01/01/2005</p>
+    <p><strong>Class:</strong> 12</p>
+    <p><strong>Section:</strong> A</p>
+    <p><strong>Father Name:</strong> ABC</p>
+    <p><strong>Father Occupation:</strong> Sample</p>
+    <p><strong>Mother Name:</strong> ABC</p>
+    <p><strong>Mother Occupation:</strong> ABC</p>
+    <p><strong>Phone Number:</strong> 123456789</p>
+    <p><strong>Email ID:</strong> abc234@gmail.com</p>
+    <p><strong>Address:</strong> abc234, red hills, hyd</p>
+    <button onclick="showParentDashboard()" class="back-btn">Back</button>
+  </div>
+   <script>
+  fetch("../../components/home-icon.html")  // adjust path if needed
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("home-icon-container").innerHTML = html;
+    });
+</script>
+<script src="../../js/script.js" defer></script>
+</body>
+</html>

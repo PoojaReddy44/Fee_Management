@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Report Card</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .report-card {
+      margin: 0 auto;
+      max-width: 800px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .report-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .student-info p {
+      margin: 5px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #444;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    .total-score {
+      font-weight: bold;
+      text-align: right;
+    }
+    .back-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="report-card">
+    <h2>Student Report Card</h2>
+    <div class="student-info">
+      <p><strong>Name:</strong> Aarav Reddy</p>
+      <p><strong>Class:</strong> 8B</p>
+      <p><strong>Class Teacher:</strong> Mrs. Kavita Sharma</p>
+      <p><strong>Grade:</strong> A</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>English</td><td>88</td><td>A</td></tr>
+        <tr><td>Hindi</td><td>85</td><td>A</td></tr>
+        <tr><td>Mathematics</td><td>92</td><td>A+</td></tr>
+        <tr><td>Science</td><td>87</td><td>A</td></tr>
+        <tr><td>Social Science</td><td>83</td><td>B+</td></tr>
+        <tr><td>Computer</td><td>90</td><td>A+</td></tr>
+      </tbody>
+    </table>
+    <p class="total-score">Total Marks: 525 / 600 &nbsp; | &nbsp; Final Grade: A</p>
+
+    <button class="back-button" onclick="window.location.href='parent-dashboard.html'">
+      <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </button>
+  </div>
+
+</body>
+</html>

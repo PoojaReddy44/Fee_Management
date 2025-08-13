@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Attendance</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="my-attendance">
+    <h1>My Attendance</h1>
+    <input type="date" id="myDate" onchange="generateMyAttendance()" />
+    <table id="myAttendanceTable" class="hidden">
+      <thead>
+        <tr>
+          <th>Period</th>
+          <th>Present/Absent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1st Period</td>
+          <td>Present</td>
+        </tr>
+        <tr>
+          <td>2nd Period</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>3rd Period</td>
+          <td>Present</td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="showAttendanceMenu()" class="back-btn">Back</button>
+  </div>
+   <script>
+  fetch("../../components/home-icon.html")  // adjust path if needed
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("home-icon-container").innerHTML = html;
+    });
+</script>
+<script src="../../js/script.js" defer></script>
+</body>
+</html>

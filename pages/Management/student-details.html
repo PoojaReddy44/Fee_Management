@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Info</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <div class="student-info-container">
+    <h1>Student Information</h1>
+
+    <label for="class-select">Select Class:</label>
+    <select id="class-select">
+      <option value="">--Select--</option>
+      <option value="lkg">LKG</option>
+      <option value="ukg">UKG</option>
+      <option value="1st">1st</option>
+      <option value="2nd">2nd</option>
+      <option value="3rd">3rd</option>
+    </select>
+
+    <div id="student-list-container"></div>
+
+    <div id="student-details" class="hidden"></div>
+
+    <button onclick="window.history.back()">Back</button>
+  </div>
+
+  <script src="../../js/script.js" defer></script>
+</body>
+</html>

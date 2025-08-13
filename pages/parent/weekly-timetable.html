@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekly Timetable - Class 8A</title>
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div id="home-icon-container"></div>
+
+  <div id="weekly-timetable">
+    <img src="../../images/logo.jpg" alt="Logo" />
+    <h1>Weekly Timetable - Class 8A</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Period1</th>
+          <th>Period2</th>
+          <th>Period3</th>
+          <th>Period4</th>
+          <th>Lunch</th>
+          <th>Period5</th>
+          <th>Period6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Timings</td>
+          <td>9:00-9:50</td>
+          <td>9:50-10:40</td>
+          <td>10:40-11:30</td>
+          <td>11:30-12:20</td>
+          <td>12:20–12:50</td>
+          <td>12:50-1:40</td>
+          <td>1:40-2:40</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Math</td>
+          <td>English</td>
+          <td>Science</td>
+          <td>Social</td>
+          <td> - </td>
+          <td>Hindi</td>
+          <td>Games</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Social</td>
+          <td>Math</td>
+          <td>Computer</td>
+          <td>Science</td>
+          <td> - </td>
+          <td>English</td>
+          <td>Drawing</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Hindi</td>
+          <td>Math</td>
+          <td>Science</td>
+          <td>Computer</td>
+          <td> - </td>
+          <td>English</td>
+          <td>Library</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>English</td>
+          <td>Social</td>
+          <td>Math</td>
+          <td>Science</td>
+          <td> - </td>
+          <td>Hindi</td>
+          <td>Music</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Computer</td>
+          <td>English</td>
+          <td>Math</td>
+          <td>Social</td>
+          <td> - </td>
+          <td>Science</td>
+          <td>Games</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="back-btn" onclick="window.history.back()">← Back</button>
+  </div>
+
+  <script>
+    fetch("../../components/home-icon.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("home-icon-container").innerHTML = html;
+      });
+  </script>
+</body>
+</html>

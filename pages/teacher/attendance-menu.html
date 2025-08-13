@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance Menu</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="attendance-menu">
+    <img src="../../images/logo.jpg" alt="Logo" />
+    <h1>Attendance</h1>
+    <div class="button-container">
+      <button onclick="showMyAttendance()">
+        <i class="fas fa-user-check"></i> My Attendance
+      </button>
+      <button onclick="showClassAttendance()">
+        <i class="fas fa-users"></i> Class Attendance
+      </button>
+      <button onclick="window.location.href='daily-attendance.html'">
+  <i class="fas fa-calendar-day"></i> Daily Attendance
+</button>
+
+
+      <button onclick="showPrintLists()">
+        <i class="fas fa-print"></i> Print Lists
+      </button>
+      <button onclick="showDashboard()">
+        <i class="fas fa-arrow-left"></i> Back
+      </button>
+    </div>
+  </div>
+  <script>
+    fetch("../../components/home-icon.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("home-icon-container").innerHTML = html;
+      });
+  </script>
+  <script src="../../js/script.js" defer></script>
+</body>
+</html>

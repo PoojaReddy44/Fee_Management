@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Status</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="payment-status">
+    <h1>Payment Status</h1>
+    <label for="studentSelect">Select Student:</label>
+    <select id="studentSelect">
+      <option value="Alice">Alice</option>
+      <option value="Bob">Bob</option>
+      <option value="Charlie">Charlie</option>
+    </select>
+    <table id="paymentTable">
+      <thead>
+        <tr><th>Student Name</th><th>Fee</th><th>Amt Paid</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Alice</td><td>Rs.1500</td><td>Rs.1200</td></tr>
+        <tr><td>Bob</td><td>Rs.1500</td><td>Rs.1300</td></tr>
+        <tr><td>Charlie</td><td>Rs.1500</td><td>Rs.1000</td></tr>
+      </tbody>
+    </table>
+    <button onclick="showStudentRecords()" class="back-btn">Back</button>
+  </div>
+   <script>
+  fetch("../../components/home-icon.html")  // adjust path if needed
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("home-icon-container").innerHTML = html;
+    });
+</script>
+<script src="../../js/script.js" defer></script>
+</body>
+</html>

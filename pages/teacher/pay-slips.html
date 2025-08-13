@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pay Slips</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="home-icon-container"></div>
+  <div id="pay-slips">
+    <h1>Pay Slips</h1>
+    <label for="paySlipMonth">Select Month:</label>
+    <input type="month" id="paySlipMonth" onchange="generatePaySlips()" />
+    <table id="paySlipTable" class="hidden">
+      <thead><tr><th>Student Name</th><th>Month</th><th>Amount</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="window.print()" class="hidden" id="printPaySlipBtn">Print Pay Slip</button>
+    <button onclick="showDashboard()" class="back-btn">Back</button>
+  </div>
+   <script>
+  fetch("../../components/home-icon.html")  // adjust path if needed
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("home-icon-container").innerHTML = html;
+    });
+</script>
+<script src="../../js/script.js" defer></script>
+</body>
+</html>
